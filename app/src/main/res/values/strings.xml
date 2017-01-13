@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Volunapp</string>
+    <string name="navigation_title_home">Home</string>
+    <string name="navigation_title_assignment">Assignment</string>
+    <string name="navigation_title_account">Account</string>
+    <string name="navigation_title_settings">Settings</string>
 </resources>
