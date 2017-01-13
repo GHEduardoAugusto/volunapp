@@ -1,7 +1,11 @@
 <resources>
     <string name="app_name">Volunapp</string>
+
     <string name="navigation_title_home">Home</string>
     <string name="navigation_title_assignment">Assignment</string>
     <string name="navigation_title_account">Account</string>
     <string name="navigation_title_settings">Settings</string>
+
+    <string name="facebook_app_id">237710673323276</string>
+    <string name="fb_login_protocol_scheme">fb237710673323276</string>
 </resources>
