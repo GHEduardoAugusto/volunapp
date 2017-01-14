@@ -12,15 +12,10 @@ import com.facebook.login.widget.LoginButton;
 
 import br.com.volunapp.volunapp.R;
 
-/**
- * Created by rodrigookuta on 13/01/17.
- */
-
 public class LoginFragment extends Fragment {
 
     CallbackManager callbackManager;
     private LoginButton loginButton;
-
 
     public LoginFragment() {
     }
@@ -43,7 +38,4 @@ public class LoginFragment extends Fragment {
 
         return inflater.inflate(R.layout.fragment_login, container, false);
     }
-
-
-
 }
