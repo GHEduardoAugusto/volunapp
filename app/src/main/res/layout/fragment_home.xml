@@ -17,6 +17,7 @@
         style="@style/Base.TextAppearance.AppCompat.Medium"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_between_views"
         android:gravity="center"
         android:text="@string/form_voluntary_subtitle" />
 
