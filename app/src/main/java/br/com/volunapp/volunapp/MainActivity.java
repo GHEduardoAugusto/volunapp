@@ -9,7 +9,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 
 import br.com.volunapp.volunapp.fragment.AccountFragment;
-import br.com.volunapp.volunapp.fragment.AssignmentFragment;
+import br.com.volunapp.volunapp.fragment.VacancyListFragment;
 import br.com.volunapp.volunapp.fragment.HomeFragment;
 import br.com.volunapp.volunapp.fragment.SettingsFragment;
 import butterknife.BindView;
@@ -39,8 +39,8 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
                 break;
 
             case R.id.action_assignment:
-                AssignmentFragment assignmentFragment = AssignmentFragment.newInstance();
-                switchFragment(assignmentFragment);
+                VacancyListFragment vacancyListFragment = VacancyListFragment.newInstance();
+                switchFragment(vacancyListFragment);
                 break;
 
             case R.id.action_account:

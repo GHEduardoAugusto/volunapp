@@ -8,16 +8,16 @@ import android.view.ViewGroup;
 
 import br.com.volunapp.volunapp.R;
 
-public class AssignmentFragment extends Fragment {
-    public AssignmentFragment() {
+public class VacancyListFragment extends Fragment {
+    public VacancyListFragment() {
     }
 
-    public static AssignmentFragment newInstance() {
-        return new AssignmentFragment();
+    public static VacancyListFragment newInstance() {
+        return new VacancyListFragment();
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_assignment, container, false);
+        return inflater.inflate(R.layout.fragment_vacancy_list, container, false);
     }
 }
