@@ -7,5 +7,6 @@
     <dimen name="item_image_margin">8dp</dimen>
     <dimen name="margin_between_views">16dp</dimen>
 
+    <dimen name="text_size_large">24sp</dimen>
 
 </resources>

@@ -1,12 +1,172 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="br.com.volunapp.volunapp.fragment.HomeFragment">
 
     <TextView
+        style="@style/Base.TextAppearance.AppCompat.Title"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/navigation_title_home" />
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/form_voluntary_title"
+        android:textSize="@dimen/text_size_large" />
 
-</FrameLayout>
+    <TextView
+        style="@style/Base.TextAppearance.AppCompat.Medium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/form_voluntary_subtitle" />
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/account_input_layout_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_between_views"
+        android:hint="@string/form_voluntary_name">
+
+        <EditText
+            android:id="@+id/account_input_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:imeOptions="actionNext"
+            android:inputType="text"
+            android:maxLines="1" />
+
+    </android.support.design.widget.TextInputLayout>
+
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/account_input_layout_adress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/form_voluntary_adress">
+
+        <EditText
+            android:id="@+id/account_input_adress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:imeOptions="actionNext"
+            android:inputType="text"
+            android:maxLines="1" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/account_input_layout_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/form_voluntary_phone">
+
+        <EditText
+            android:id="@+id/account_input_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:imeOptions="actionNext"
+            android:inputType="phone" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/account_input_layout_mail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/form_voluntary_mail">
+
+        <EditText
+            android:id="@+id/account_input_mail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:imeOptions="actionDone"
+            android:inputType="textEmailAddress" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.v7.widget.GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:grid="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/choice_grid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        grid:alignmentMode="alignBounds"
+        grid:columnCount="2"
+        grid:rowOrderPreserved="false"
+        grid:useDefaultMargins="true">
+
+        <CheckBox
+            android:id="@+id/volunteering_type_elder"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/volunteering_type_elder"
+            grid:layout_columnWeight="1"
+            grid:layout_gravity="fill_horizontal" />
+
+        <CheckBox
+            android:id="@+id/volunteering_type_health"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/volunteering_type_health"
+            grid:layout_columnWeight="1"
+            grid:layout_gravity="fill_horizontal" />
+
+        <CheckBox
+            android:id="@+id/volunteering_type_culture"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/volunteering_type_culture"
+            grid:layout_columnWeight="1"
+            grid:layout_gravity="fill_horizontal" />
+
+        <CheckBox
+            android:id="@+id/volunteering_type_animal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/volunteering_type_animal"
+            grid:layout_columnWeight="1"
+            grid:layout_gravity="fill_horizontal" />
+
+        <CheckBox
+            android:id="@+id/volunteering_type_sports"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/volunteering_type_education"
+            grid:layout_columnWeight="1"
+            grid:layout_gravity="fill_horizontal" />
+
+        <CheckBox
+            android:id="@+id/volunteering_type_environment"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/volunteering_type_environment"
+            grid:layout_columnWeight="1"
+            grid:layout_gravity="fill_horizontal" />
+
+        <CheckBox
+            android:id="@+id/volunteering_type_child"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/volunteering_type_child"
+            grid:layout_columnWeight="1"
+            grid:layout_gravity="fill_horizontal" />
+
+        <CheckBox
+            android:id="@+id/volunteering_type_disabled"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/volunteering_type_disabled"
+            grid:layout_columnWeight="1"
+            grid:layout_gravity="fill_horizontal" />
+
+    </android.support.v7.widget.GridLayout>
+
+    <Button
+        android:id="@+id/register_button"
+        style="@style/AppTheme.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/margin_between_views"
+        android:text="@string/register" />
+
+</LinearLayout>
