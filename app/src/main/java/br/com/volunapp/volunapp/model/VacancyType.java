@@ -13,7 +13,6 @@ public enum VacancyType {
     HEALTH(R.string.volunteering_type_health, R.drawable.volunteering_type_health),
     EDUCATION(R.string.volunteering_type_education, R.drawable.volunteering_type_education),
     SOCIAL(R.string.volunteering_type_social, R.drawable.volunteering_type_social),
-    SPORT(R.string.volunteering_type_education, R.drawable.volunteering_type_education),
 
     // TODO: Adicionar imagens para esses tipos de vagas
     ANIMAL(R.string.volunteering_type_disabled, R.drawable.volunteering_type_health),

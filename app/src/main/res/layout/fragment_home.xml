@@ -127,7 +127,7 @@
             grid:layout_gravity="fill_horizontal" />
 
         <CheckBox
-            android:id="@+id/volunteering_type_sports"
+            android:id="@+id/volunteering_type_education"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="@string/volunteering_type_education"

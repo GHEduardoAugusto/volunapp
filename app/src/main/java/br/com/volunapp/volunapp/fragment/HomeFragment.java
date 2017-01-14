@@ -214,12 +214,12 @@ public class HomeFragment extends Fragment {
     }
 
 
-    @OnCheckedChanged(R.id.volunteering_type_sports)
-    void onSportTypeCheckedChanged(boolean checked) {
+    @OnCheckedChanged(R.id.volunteering_type_education)
+    void onEducationTypeCheckedChanged(boolean checked) {
         if (checked) {
-            vacancyTypes.add(VacancyType.SPORT);
+            vacancyTypes.add(VacancyType.EDUCATION);
         } else {
-            vacancyTypes.remove(VacancyType.SPORT);
+            vacancyTypes.remove(VacancyType.EDUCATION);
         }
     }
 
