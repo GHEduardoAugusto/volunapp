@@ -13,7 +13,7 @@
         android:id="@+id/action_assignment"
         android:enabled="true"
         android:icon="@drawable/ic_assignment"
-        android:title="@string/navigation_title_assignment"
+        android:title="@string/navigation_title_vacancies"
         app:showAsAction="ifRoom" />
 
     <item

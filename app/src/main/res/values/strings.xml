@@ -2,11 +2,17 @@
     <string name="app_name">Volunapp</string>
 
     <string name="navigation_title_home">Home</string>
-    <string name="navigation_title_assignment">Assignment</string>
+    <string name="navigation_title_vacancies">Vagas</string>
     <string name="navigation_title_account">Account</string>
     <string name="navigation_title_settings">Settings</string>
 
-    <string name="vacancy_type">Tipo de vaga</string>
+    <string name="volunteering_type">Tipo de vaga</string>
+    <string name="volunteering_type_child">Criança</string>
+    <string name="volunteering_type_culture">Cultura</string>
+    <string name="volunteering_type_elder">Idoso</string>
+    <string name="volunteering_type_health">Saúde</string>
+    <string name="volunteering_type_learn">Educação</string>
+    <string name="volunteering_type_social">Social</string>
 
     <string name="facebook_app_id">237710673323276</string>
     <string name="fb_login_protocol_scheme">fb237710673323276</string>

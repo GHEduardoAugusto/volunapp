@@ -13,7 +13,7 @@
         android:layout_height="@dimen/item_image_width_height"
         android:layout_margin="@dimen/item_image_margin"
         android:src="@drawable/volunteering_type_child"
-        android:contentDescription="@string/vacancy_type" />
+        android:contentDescription="@string/volunteering_type" />
 
     <TextView
         style="@style/Base.TextAppearance.AppCompat.Medium"
