@@ -2,6 +2,7 @@ package br.com.volunapp.volunapp.fragment;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.design.widget.TextInputLayout;
 import android.support.v4.app.Fragment;
 import android.text.Editable;
@@ -14,9 +15,14 @@ import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import br.com.volunapp.volunapp.R;
+import br.com.volunapp.volunapp.model.VacancyType;
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnCheckedChanged;
 import butterknife.OnClick;
 import butterknife.OnEditorAction;
 import butterknife.OnFocusChange;
@@ -53,11 +59,19 @@ public class HomeFragment extends Fragment {
     private boolean firstAccessPhone = true;
     private boolean firstAccessMail = true;
 
+    private List<VacancyType> vacancyTypes;
+
     public HomeFragment() {
     }
 
     public static HomeFragment newInstance() {
         return new HomeFragment();
+    }
+
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        vacancyTypes = new ArrayList<>();
     }
 
     @Override
@@ -77,7 +91,7 @@ public class HomeFragment extends Fragment {
     }
 
     @OnTextChanged(value = R.id.account_input_name, callback = OnTextChanged.Callback.AFTER_TEXT_CHANGED)
-    public void nameTextChange(Editable text) {
+    void nameTextChange(Editable text) {
         if (text.toString().isEmpty()) {
             inputLayoutName.setErrorEnabled(true);
             inputLayoutName.setError(getString(R.string.erro_field_cant_be_empty));
@@ -97,7 +111,7 @@ public class HomeFragment extends Fragment {
     }
 
     @OnTextChanged(value = R.id.account_input_adress, callback = OnTextChanged.Callback.AFTER_TEXT_CHANGED)
-    public void adressTextChange(Editable text) {
+    void adressTextChange(Editable text) {
         if (text.toString().isEmpty()) {
             inputLayoutAdress.setErrorEnabled(true);
             inputLayoutAdress.setError(getString(R.string.erro_field_cant_be_empty));
@@ -117,7 +131,7 @@ public class HomeFragment extends Fragment {
     }
 
     @OnTextChanged(value = R.id.account_input_phone, callback = OnTextChanged.Callback.AFTER_TEXT_CHANGED)
-    public void phoneTextChange(CharSequence text) {
+    void phoneTextChange(CharSequence text) {
         if (text.toString().isEmpty()) {
             inputLayoutPhone.setErrorEnabled(true);
             inputLayoutPhone.setError(getString(R.string.erro_field_cant_be_empty));
@@ -137,7 +151,7 @@ public class HomeFragment extends Fragment {
     }
 
     @OnTextChanged(value = R.id.account_input_mail, callback = OnTextChanged.Callback.AFTER_TEXT_CHANGED)
-    public void mailTextChange(CharSequence text) {
+    void mailTextChange(CharSequence text) {
         if (text.toString().isEmpty()) {
             inputLayoutMail.setErrorEnabled(true);
             inputLayoutMail.setError(getString(R.string.erro_field_cant_be_empty));
@@ -148,7 +162,7 @@ public class HomeFragment extends Fragment {
     }
 
     @OnEditorAction(R.id.account_input_mail)
-    public boolean nameEditorAction(EditText currentEdit, int actionId, KeyEvent event) {
+    boolean nameEditorAction(EditText currentEdit, int actionId, KeyEvent event) {
         if (actionId == EditorInfo.IME_ACTION_DONE) {
             String userMail = currentEdit.getText().toString();
             if (TextUtils.isEmpty(userMail)) {
@@ -160,6 +174,80 @@ public class HomeFragment extends Fragment {
             return true;
         }
         return false;
+    }
+
+
+    @OnCheckedChanged(R.id.volunteering_type_elder)
+    void onElderTypeCheckedChanged(boolean checked) {
+        if (checked) {
+            vacancyTypes.add(VacancyType.ELDER);
+        } else {
+            vacancyTypes.remove(VacancyType.ELDER);
+        }
+    }
+
+    @OnCheckedChanged(R.id.volunteering_type_health)
+    void onHealthTypeCheckedChanged(boolean checked) {
+        if (checked) {
+            vacancyTypes.add(VacancyType.HEALTH);
+        } else {
+            vacancyTypes.remove(VacancyType.HEALTH);
+        }
+    }
+
+    @OnCheckedChanged(R.id.volunteering_type_culture)
+    void onCultureTypeCheckedChanged(boolean checked) {
+        if (checked) {
+            vacancyTypes.add(VacancyType.CULTURE);
+        } else {
+            vacancyTypes.remove(VacancyType.CULTURE);
+        }
+    }
+
+    @OnCheckedChanged(R.id.volunteering_type_animal)
+    void onAnimalTypeCheckedChanged(boolean checked) {
+        if (checked) {
+            vacancyTypes.add(VacancyType.ANIMAL);
+        } else {
+            vacancyTypes.remove(VacancyType.ANIMAL);
+        }
+    }
+
+
+    @OnCheckedChanged(R.id.volunteering_type_sports)
+    void onSportTypeCheckedChanged(boolean checked) {
+        if (checked) {
+            vacancyTypes.add(VacancyType.SPORT);
+        } else {
+            vacancyTypes.remove(VacancyType.SPORT);
+        }
+    }
+
+    @OnCheckedChanged(R.id.volunteering_type_environment)
+    void onEnvironmentTypeCheckedChanged(boolean checked) {
+        if (checked) {
+            vacancyTypes.add(VacancyType.ENVIRONMENT);
+        } else {
+            vacancyTypes.remove(VacancyType.ENVIRONMENT);
+        }
+    }
+
+    @OnCheckedChanged(R.id.volunteering_type_child)
+    void onChildTypeCheckedChanged(boolean checked) {
+        if (checked) {
+            vacancyTypes.add(VacancyType.CHILD);
+        } else {
+            vacancyTypes.remove(VacancyType.CHILD);
+        }
+    }
+
+    @OnCheckedChanged(R.id.volunteering_type_disabled)
+    void onDisabledTypeCheckedChanged(boolean checked) {
+        if (checked) {
+            vacancyTypes.add(VacancyType.DISABLED);
+        } else {
+            vacancyTypes.remove(VacancyType.DISABLED);
+        }
     }
 
     @OnClick(R.id.register_button)

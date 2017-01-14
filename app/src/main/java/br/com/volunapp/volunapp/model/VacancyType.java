@@ -12,7 +12,13 @@ public enum VacancyType {
     ELDER(R.string.volunteering_type_elder, R.drawable.volunteering_type_elder),
     HEALTH(R.string.volunteering_type_health, R.drawable.volunteering_type_health),
     EDUCATION(R.string.volunteering_type_education, R.drawable.volunteering_type_education),
-    SOCIAL(R.string.volunteering_type_social, R.drawable.volunteering_type_social);
+    SOCIAL(R.string.volunteering_type_social, R.drawable.volunteering_type_social),
+    SPORT(R.string.volunteering_type_education, R.drawable.volunteering_type_education),
+
+    // TODO: Adicionar imagens para esses tipos de vagas
+    ANIMAL(R.string.volunteering_type_disabled, R.drawable.volunteering_type_health),
+    ENVIRONMENT(R.string.volunteering_type_environment, R.drawable.volunteering_type_health),
+    DISABLED(R.string.volunteering_type_disabled, R.drawable.volunteering_type_health);
 
     @StringRes
     private final int name;
@@ -23,5 +29,15 @@ public enum VacancyType {
     VacancyType(@StringRes int name, @DrawableRes int icon) {
         this.name = name;
         this.icon = icon;
+    }
+
+    @StringRes
+    public int getName() {
+        return name;
+    }
+
+    @DrawableRes
+    public int getIcon() {
+        return icon;
     }
 }
