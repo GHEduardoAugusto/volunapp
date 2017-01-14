@@ -4,9 +4,9 @@
     android:layout_height="match_parent"
     tools:context="br.com.volunapp.volunapp.fragment.VacancyListFragment">
 
-    <TextView
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/vacancy_recycler"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/navigation_title_assignment" />
+        android:layout_height="match_parent" />
 
 </FrameLayout>
