@@ -8,9 +8,6 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 
-import com.facebook.FacebookSdk;
-import com.facebook.appevents.AppEventsLogger;
-
 import br.com.volunapp.volunapp.fragment.AccountFragment;
 import br.com.volunapp.volunapp.fragment.AssignmentFragment;
 import br.com.volunapp.volunapp.fragment.HomeFragment;
@@ -26,8 +23,6 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        FacebookSdk.sdkInitialize(getApplicationContext());
-        AppEventsLogger.activateApp(this);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
 
