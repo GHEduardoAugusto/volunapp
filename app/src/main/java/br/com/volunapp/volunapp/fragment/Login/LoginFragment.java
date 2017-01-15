@@ -13,8 +13,11 @@ import android.widget.EditText;
 import android.widget.Toast;
 import com.facebook.CallbackManager;
 
+import br.com.volunapp.volunapp.CredentialsActivity;
 import br.com.volunapp.volunapp.MainActivity;
 import br.com.volunapp.volunapp.R;
+import br.com.volunapp.volunapp.fragment.ResetPassword.ResetPasswordFragment;
+import br.com.volunapp.volunapp.fragment.SignUp.SignUpFragment;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -63,6 +66,19 @@ public class LoginFragment extends Fragment implements LoginView{
 
 
     }
+
+    @OnClick(R.id.link_resetPassord) public void link_resetPassord()
+    {
+        CredentialsActivity.getInstance().switchFragment(new ResetPasswordFragment());
+    }
+
+
+    @OnClick(R.id.link_signup) public void link_signup()
+    {
+        CredentialsActivity.getInstance().switchFragment(new SignUpFragment());
+    }
+
+
 
     @Override
     public void showProgress() {

@@ -5,8 +5,9 @@
     tools:context="br.com.volunapp.volunapp.fragment.AccountFragment">
 
     <TextView
+        android:id="@+id/link_signOut"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/navigation_title_account" />
+        android:text="@string/navigation_signOut" />
 
 </FrameLayout>

@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 
 
 import br.com.volunapp.volunapp.fragment.Login.LoginFragment;
+import br.com.volunapp.volunapp.fragment.SignUp.SignUpFragment;
 import butterknife.ButterKnife;
 
 /**
@@ -15,18 +16,32 @@ import butterknife.ButterKnife;
 
 public class CredentialsActivity  extends AppCompatActivity {
 
+    private static CredentialsActivity INSTANCE;
+
+
+    public static CredentialsActivity getInstance() {
+
+        if(INSTANCE == null)
+        {
+            return new CredentialsActivity();
+        }
+        return INSTANCE;
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_credentials);
         ButterKnife.bind(this);
 
+        INSTANCE = this;
+
         switchFragment(LoginFragment.newInstance());
 
     }
 
 
-    private void switchFragment(Fragment fragment) {
+    public void switchFragment(Fragment fragment) {
         FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
         ft.replace(R.id.fragment_container, fragment).commit();
     }

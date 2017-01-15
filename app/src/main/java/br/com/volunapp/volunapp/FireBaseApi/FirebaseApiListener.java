@@ -6,7 +6,13 @@ package br.com.volunapp.volunapp.FireBaseApi;
 
 public interface FirebaseApiListener {
 
-    void LoginSuccess();
 
-    void LoginError();
+
+        void Success();
+
+        void Error();
+
+
+
+
 }

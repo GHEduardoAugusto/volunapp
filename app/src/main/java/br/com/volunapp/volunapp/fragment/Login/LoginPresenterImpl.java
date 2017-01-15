@@ -62,7 +62,7 @@ public class LoginPresenterImpl implements LoginPresenter,FirebaseApiListener {
     }
 
     @Override
-    public void LoginSuccess() {
+    public void Success() {
 
         loginView.hideProgress();
         loginView.navigateToHome();
@@ -71,7 +71,7 @@ public class LoginPresenterImpl implements LoginPresenter,FirebaseApiListener {
     }
 
     @Override
-    public void LoginError() {
+    public void Error() {
 
         loginView.hideProgress();
         loginView.setLoginError(activity.getString(R.string.login_invalid_credential));
