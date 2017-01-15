@@ -12,10 +12,12 @@
         android:theme="@style/AppTheme"
         android:name="Application">
 
-        <activity android:name=".MainActivity">
-        </activity>
 
         <activity android:name=".CredentialsActivity">
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -32,8 +34,10 @@
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
+
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
+
                 <data android:scheme="@string/fb_login_protocol_scheme" />
             </intent-filter>
         </activity>
