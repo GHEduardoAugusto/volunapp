@@ -30,4 +30,15 @@
 
     <string name="facebook_app_id">237710673323276</string>
     <string name="fb_login_protocol_scheme">fb237710673323276</string>
+
+
+    <string name="login_empty_user_password">Informe o usuário e senha</string>
+    <string name="login_password_too_short">A senha deve ser maior que 6 caracteres</string>
+    <string name="login_invalid_credential">Usuário ou senha incorretos</string>
+    <string name="login_title">Login</string>
+    <string name="login_verifing">Verificando login..."</string>
+
+
+
+
 </resources>
