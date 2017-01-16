@@ -2,9 +2,32 @@
     <string name="app_name">Volunapp</string>
 
     <string name="navigation_title_home">Home</string>
-    <string name="navigation_title_assignment">Assignment</string>
+    <string name="navigation_title_vacancies">Vagas</string>
     <string name="navigation_title_account">Account</string>
     <string name="navigation_title_settings">Settings</string>
+
+    <string name="form_voluntary_title">Bem vindo ao Volunapp</string>
+    <string name="form_voluntary_subtitle">Preencha os dados abaixo</string>
+
+    <string name="form_voluntary_name">Nome Completo</string>
+    <string name="form_voluntary_adress">Endereço</string>
+    <string name="form_voluntary_phone">Telefone</string>
+    <string name="form_voluntary_mail">Email</string>
+
+    <string name="volunteering_type">Tipo de vaga</string>
+    <string name="volunteering_type_child">Crianças e Jovens</string>
+    <string name="volunteering_type_culture">Cultura</string>
+    <string name="volunteering_type_elder">Cuidado com idosos</string>
+    <string name="volunteering_type_health">Saúde</string>
+    <string name="volunteering_type_education">Educação e Esportes</string>
+    <string name="volunteering_type_social">Social</string>
+    <string name="volunteering_type_animal">Proteção Animal</string>
+    <string name="volunteering_type_environment">Meio Ambiente</string>
+    <string name="volunteering_type_disabled">Pessoas com defiência</string>
+
+    <string name="register">Cadastrar</string>
+
+    <string name="erro_field_cant_be_empty">Campo não pode estar vazio</string>
 
     <string name="facebook_app_id">237710673323276</string>
     <string name="fb_login_protocol_scheme">fb237710673323276</string>

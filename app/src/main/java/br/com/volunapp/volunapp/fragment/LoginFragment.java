@@ -19,15 +19,10 @@ import com.facebook.login.widget.LoginButton;
 
 import br.com.volunapp.volunapp.R;
 
-/**
- * Created by rodrigookuta on 13/01/17.
- */
-
 public class LoginFragment extends Fragment {
 
     CallbackManager callbackManager;
     private LoginButton loginButton;
-
 
     public LoginFragment() {
     }
@@ -49,6 +44,7 @@ public class LoginFragment extends Fragment {
         loginButton.setReadPermissions("email", "public_profile");
 
 
+        
         loginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
             @Override
             public void onSuccess(LoginResult loginResult) {
@@ -82,4 +78,5 @@ public class LoginFragment extends Fragment {
         super.onActivityResult(requestCode, resultCode, data);
         callbackManager.onActivityResult(requestCode, resultCode, data);
     }
+
 }
