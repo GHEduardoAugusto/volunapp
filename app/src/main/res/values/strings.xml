@@ -16,11 +16,10 @@
 
     <string name="volunteering_type">Tipo de vaga</string>
     <string name="volunteering_type_child">Crianças e Jovens</string>
-    <string name="volunteering_type_culture">Cultura</string>
+    <string name="volunteering_type_culture">Arte e Cultura</string>
     <string name="volunteering_type_elder">Cuidado com idosos</string>
     <string name="volunteering_type_health">Saúde</string>
     <string name="volunteering_type_education">Educação e Esportes</string>
-    <string name="volunteering_type_social">Social</string>
     <string name="volunteering_type_animal">Proteção Animal</string>
     <string name="volunteering_type_environment">Meio Ambiente</string>
     <string name="volunteering_type_disabled">Pessoas com defiência</string>
