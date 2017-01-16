@@ -16,11 +16,10 @@
 
     <string name="volunteering_type">Tipo de vaga</string>
     <string name="volunteering_type_child">Crianças e Jovens</string>
-    <string name="volunteering_type_culture">Cultura</string>
+    <string name="volunteering_type_culture">Arte e Cultura</string>
     <string name="volunteering_type_elder">Cuidado com idosos</string>
     <string name="volunteering_type_health">Saúde</string>
     <string name="volunteering_type_education">Educação e Esportes</string>
-    <string name="volunteering_type_social">Social</string>
     <string name="volunteering_type_animal">Proteção Animal</string>
     <string name="volunteering_type_environment">Meio Ambiente</string>
     <string name="volunteering_type_disabled">Pessoas com defiência</string>
@@ -31,4 +30,15 @@
 
     <string name="facebook_app_id">237710673323276</string>
     <string name="fb_login_protocol_scheme">fb237710673323276</string>
+
+
+    <string name="login_empty_user_password">Informe o usuário e senha</string>
+    <string name="login_password_too_short">A senha deve ser maior que 6 caracteres</string>
+    <string name="login_invalid_credential">Usuário ou senha incorretos</string>
+    <string name="login_title">Login</string>
+    <string name="login_verifing">Verificando login..."</string>
+
+
+
+
 </resources>

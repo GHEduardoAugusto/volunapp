@@ -44,7 +44,7 @@ public class LoginFragment extends Fragment {
         loginButton.setReadPermissions("email", "public_profile");
 
 
-        
+
         loginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
             @Override
             public void onSuccess(LoginResult loginResult) {
