@@ -84,7 +84,7 @@ public class HomeFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
         ButterKnife.bind(this, view);
 
-        TextWatcher cepTextWatcher = Mask.getTextWatcher(Mask.CPF_MASK, inputCep);
+        TextWatcher cepTextWatcher = Mask.getTextWatcher(Mask.CEP_MASK, inputCep);
         inputCep.addTextChangedListener(cepTextWatcher);
 
         TextWatcher phoneTextWatcher = Mask.getTextWatcher(Mask.PHONE, inputPhone);

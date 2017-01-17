@@ -6,7 +6,7 @@ import android.widget.EditText;
 
 public class Mask {
 
-    public static final String CPF_MASK = "##.###-###";
+    public static final String CEP_MASK = "##.###-###";
     public static final String PHONE = "phone";
     private static final String LANDLINE_MASK = "(##) ####-####";
     private static final String CELPHONE_MASK = "(##) #####-####";
