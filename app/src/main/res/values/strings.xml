@@ -23,6 +23,7 @@
     <string name="volunteering_type_animal">Proteção Animal</string>
     <string name="volunteering_type_environment">Meio Ambiente</string>
     <string name="volunteering_type_disabled">Pessoas com defiência</string>
+    <string name="message_max_volunteering_types_reached">Escolha no máximo 3 opções</string>
 
     <string name="register">Cadastrar</string>
 
@@ -37,8 +38,6 @@
     <string name="login_invalid_credential">Usuário ou senha incorretos</string>
     <string name="login_title">Login</string>
     <string name="login_verifing">Verificando login..."</string>
-
-
 
 
 </resources>

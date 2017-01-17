@@ -13,7 +13,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.InputMethodManager;
+import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,6 +32,7 @@ import butterknife.OnTextChanged;
 
 public class HomeFragment extends Fragment {
 
+    public static final int MAX_VOLUTEERING_TYPES = 3;
     @BindView(R.id.account_input_layout_name)
     TextInputLayout inputLayoutName;
 
@@ -176,78 +179,124 @@ public class HomeFragment extends Fragment {
         return false;
     }
 
-
     @OnCheckedChanged(R.id.volunteering_type_elder)
-    void onElderTypeCheckedChanged(boolean checked) {
+    void onElderTypeCheckedChanged(CheckBox checkBox, boolean checked) {
         if (checked) {
-            vacancyTypes.add(VacancyType.ELDER);
+            if (canSelectMoreVolunteeringTypes()) {
+                vacancyTypes.add(VacancyType.ELDER);
+            } else {
+                displayMaximumVolunteeringTypesReachedMessage();
+                checkBox.setChecked(false);
+            }
         } else {
             vacancyTypes.remove(VacancyType.ELDER);
         }
     }
 
     @OnCheckedChanged(R.id.volunteering_type_health)
-    void onHealthTypeCheckedChanged(boolean checked) {
+    void onHealthTypeCheckedChanged(CheckBox checkBox, boolean checked) {
         if (checked) {
-            vacancyTypes.add(VacancyType.HEALTH);
+            if (canSelectMoreVolunteeringTypes()) {
+                vacancyTypes.add(VacancyType.HEALTH);
+            } else {
+                displayMaximumVolunteeringTypesReachedMessage();
+                checkBox.setChecked(false);
+            }
         } else {
             vacancyTypes.remove(VacancyType.HEALTH);
         }
     }
 
     @OnCheckedChanged(R.id.volunteering_type_culture)
-    void onCultureTypeCheckedChanged(boolean checked) {
+    void onCultureTypeCheckedChanged(CheckBox checkBox, boolean checked) {
         if (checked) {
-            vacancyTypes.add(VacancyType.CULTURE);
+            if (canSelectMoreVolunteeringTypes()) {
+                vacancyTypes.add(VacancyType.CULTURE);
+            } else {
+                displayMaximumVolunteeringTypesReachedMessage();
+                checkBox.setChecked(false);
+            }
         } else {
             vacancyTypes.remove(VacancyType.CULTURE);
         }
     }
 
     @OnCheckedChanged(R.id.volunteering_type_animal)
-    void onAnimalTypeCheckedChanged(boolean checked) {
+    void onAnimalTypeCheckedChanged(CheckBox checkBox, boolean checked) {
         if (checked) {
-            vacancyTypes.add(VacancyType.ANIMAL);
+            if (canSelectMoreVolunteeringTypes()) {
+                vacancyTypes.add(VacancyType.ANIMAL);
+            } else {
+                displayMaximumVolunteeringTypesReachedMessage();
+                checkBox.setChecked(false);
+            }
         } else {
             vacancyTypes.remove(VacancyType.ANIMAL);
         }
     }
 
-
     @OnCheckedChanged(R.id.volunteering_type_education)
-    void onEducationTypeCheckedChanged(boolean checked) {
+    void onEducationTypeCheckedChanged(CheckBox checkBox, boolean checked) {
         if (checked) {
-            vacancyTypes.add(VacancyType.EDUCATION);
+            if (canSelectMoreVolunteeringTypes()) {
+                vacancyTypes.add(VacancyType.EDUCATION);
+            } else {
+                displayMaximumVolunteeringTypesReachedMessage();
+                checkBox.setChecked(false);
+            }
         } else {
             vacancyTypes.remove(VacancyType.EDUCATION);
         }
     }
 
     @OnCheckedChanged(R.id.volunteering_type_environment)
-    void onEnvironmentTypeCheckedChanged(boolean checked) {
+    void onEnvironmentTypeCheckedChanged(CheckBox checkBox, boolean checked) {
         if (checked) {
-            vacancyTypes.add(VacancyType.ENVIRONMENT);
+            if (canSelectMoreVolunteeringTypes()) {
+                vacancyTypes.add(VacancyType.ENVIRONMENT);
+            } else {
+                displayMaximumVolunteeringTypesReachedMessage();
+                checkBox.setChecked(false);
+            }
         } else {
             vacancyTypes.remove(VacancyType.ENVIRONMENT);
         }
     }
 
     @OnCheckedChanged(R.id.volunteering_type_child)
-    void onChildTypeCheckedChanged(boolean checked) {
+    void onChildTypeCheckedChanged(CheckBox checkBox, boolean checked) {
         if (checked) {
-            vacancyTypes.add(VacancyType.CHILD);
+            if (canSelectMoreVolunteeringTypes()) {
+                vacancyTypes.add(VacancyType.CHILD);
+            } else {
+                displayMaximumVolunteeringTypesReachedMessage();
+                checkBox.setChecked(false);
+            }
         } else {
             vacancyTypes.remove(VacancyType.CHILD);
         }
     }
 
     @OnCheckedChanged(R.id.volunteering_type_disabled)
-    void onDisabledTypeCheckedChanged(boolean checked) {
+    void onDisabledTypeCheckedChanged(CheckBox checkBox, boolean checked) {
         if (checked) {
-            vacancyTypes.add(VacancyType.DISABLED);
+            if (canSelectMoreVolunteeringTypes()) {
+                vacancyTypes.add(VacancyType.DISABLED);
+            } else {
+                displayMaximumVolunteeringTypesReachedMessage();
+                checkBox.setChecked(false);
+            }
         } else {
             vacancyTypes.remove(VacancyType.DISABLED);
         }
+    }
+
+    private boolean canSelectMoreVolunteeringTypes() {
+        return vacancyTypes.size() < MAX_VOLUTEERING_TYPES;
+    }
+
+    private void displayMaximumVolunteeringTypesReachedMessage() {
+        Toast.makeText(getContext(), R.string.message_max_volunteering_types_reached, Toast.LENGTH_SHORT).show();
     }
 
     @OnClick(R.id.register_button)
