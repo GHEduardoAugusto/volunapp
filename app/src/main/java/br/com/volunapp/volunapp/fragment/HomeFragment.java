@@ -7,6 +7,7 @@ import android.support.design.widget.TextInputLayout;
 import android.support.v4.app.Fragment;
 import android.text.Editable;
 import android.text.TextUtils;
+import android.text.TextWatcher;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -22,6 +23,7 @@ import java.util.List;
 
 import br.com.volunapp.volunapp.R;
 import br.com.volunapp.volunapp.model.VacancyType;
+import br.com.volunapp.volunapp.util.Mask;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnCheckedChanged;
@@ -39,11 +41,11 @@ public class HomeFragment extends Fragment {
     @BindView(R.id.account_input_name)
     EditText inputName;
 
-    @BindView(R.id.account_input_layout_adress)
-    TextInputLayout inputLayoutAdress;
+    @BindView(R.id.account_input_layout_cep)
+    TextInputLayout inputLayoutCep;
 
-    @BindView(R.id.account_input_adress)
-    EditText inputAdress;
+    @BindView(R.id.account_input_cep)
+    EditText inputCep;
 
     @BindView(R.id.account_input_layout_phone)
     TextInputLayout inputLayoutPhone;
@@ -58,7 +60,7 @@ public class HomeFragment extends Fragment {
     EditText inputMail;
 
     private boolean firstAccessName = true;
-    private boolean firstAccessAdress = true;
+    private boolean firstAccessCep = true;
     private boolean firstAccessPhone = true;
     private boolean firstAccessMail = true;
 
@@ -81,6 +83,13 @@ public class HomeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
         ButterKnife.bind(this, view);
+
+        TextWatcher cepTextWatcher = Mask.getTextWatcher(Mask.CPF_MASK, inputCep);
+        inputCep.addTextChangedListener(cepTextWatcher);
+
+        TextWatcher phoneTextWatcher = Mask.getTextWatcher(Mask.PHONE, inputPhone);
+        inputPhone.addTextChangedListener(phoneTextWatcher);
+
         return view;
     }
 
@@ -104,23 +113,23 @@ public class HomeFragment extends Fragment {
         }
     }
 
-    @OnFocusChange(R.id.account_input_adress)
-    void adressFocusChange(EditText editText) {
-        if (firstAccessAdress) {
-            firstAccessAdress = false;
+    @OnFocusChange(R.id.account_input_cep)
+    void cepFocusChange(EditText editText) {
+        if (firstAccessCep) {
+            firstAccessCep = false;
         } else {
-            adressTextChange(editText.getText());
+            cepTextChange(editText.getText());
         }
     }
 
-    @OnTextChanged(value = R.id.account_input_adress, callback = OnTextChanged.Callback.AFTER_TEXT_CHANGED)
-    void adressTextChange(Editable text) {
+    @OnTextChanged(value = R.id.account_input_cep, callback = OnTextChanged.Callback.AFTER_TEXT_CHANGED)
+    void cepTextChange(Editable text) {
         if (text.toString().isEmpty()) {
-            inputLayoutAdress.setErrorEnabled(true);
-            inputLayoutAdress.setError(getString(R.string.erro_field_cant_be_empty));
+            inputLayoutCep.setErrorEnabled(true);
+            inputLayoutCep.setError(getString(R.string.erro_field_cant_be_empty));
         } else {
-            inputLayoutAdress.setErrorEnabled(false);
-            inputLayoutAdress.setError(null);
+            inputLayoutCep.setErrorEnabled(false);
+            inputLayoutCep.setError(null);
         }
     }
 

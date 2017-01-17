@@ -10,7 +10,7 @@
     <string name="form_voluntary_subtitle">Preencha os dados abaixo</string>
 
     <string name="form_voluntary_name">Nome Completo</string>
-    <string name="form_voluntary_adress">Endereço</string>
+    <string name="form_voluntary_cep">CEP</string>
     <string name="form_voluntary_phone">Telefone</string>
     <string name="form_voluntary_mail">Email</string>
 

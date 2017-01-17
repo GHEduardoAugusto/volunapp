@@ -40,13 +40,13 @@
 
 
     <android.support.design.widget.TextInputLayout
-        android:id="@+id/account_input_layout_adress"
+        android:id="@+id/account_input_layout_cep"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/form_voluntary_adress">
+        android:hint="@string/form_voluntary_cep">
 
         <EditText
-            android:id="@+id/account_input_adress"
+            android:id="@+id/account_input_cep"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:imeOptions="actionNext"
